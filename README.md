@@ -1,43 +1,26 @@
 # SHADOWFRAG notices
 
-Public, text-only announcements for the SHADOWFRAG main menu.
+Public JSON announcements for the SHADOWFRAG notice board.
 
-Feed: https://senpai.cyberfracture.com/notices.json
+Edit [notices.json](notices.json) to update the announcements. The three current
+entries are clearly marked samples; replace them with real news when ready.
 
-## Publish a notice
+Direct JSON URL:
+https://raw.githubusercontent.com/cyberfracture/shadowfrag-notices/main/notices.json
 
-Edit `notices.json` on the `main` branch. Keep the newest entry first. Give each
-notice a stable, unique `id`, a real `date` in `YYYY-MM-DD` format, a `title`, a
-short `summary`, and a plain-text `body`. Use `\n\n` between paragraphs. Set
-`sample` to `false` for real announcements. Delete the sample entries when ready.
+Hosting and the `senpai.shadowfrag.com` domain will be configured manually by
+the owner. This repository contains the feed, not a GitHub Pages website.
 
-Run `python3 validate.py` before committing. GitHub Pages publishes the root of
-`main`; no application server, database, or Worker is required. Cloudflare caches
-the exact `/notices.json` URL for five minutes. The game refreshes in menus about
-every five minutes with a small random delay, uses conditional requests, and
-keeps its last good copy when offline. Allow for both cache intervals after an
-edit. A new installation fetches immediately.
+## Editing
 
-## Format and limits
+Keep the newest notice first. Each notice has a unique `id`, `date` in
+`YYYY-MM-DD` format, `title`, `summary`, plain-text `body`, and boolean `sample`.
+Use `\n\n` for paragraph breaks. Set `sample` to `false` for real news.
 
-- `schema_version` must be the integer `1`.
-- At most 20 notices; at most 65,536 UTF-8 bytes for the entire file.
-- IDs: 1–64 ASCII letters, digits, hyphens, or underscores; no duplicates.
-- Titles: 1–96 bytes; summaries: 1–240 bytes; bodies: 1–4,000 bytes.
-- Dates must be valid calendar dates. `sample` must be a boolean.
-- Plain UTF-8 text only. No HTML, Markdown rendering, images, executable content,
-  or embedded links. Control characters are forbidden except newlines in bodies.
-- An invalid update is rejected as a whole; it never replaces the last good feed.
+Run `python3 validate.py` before publishing. The game accepts schema version 1,
+at most 20 notices, and at most 64 KiB of JSON. Titles are limited to 96 UTF-8
+bytes, summaries to 240, and bodies to 4,000. No HTML or executable content is
+rendered. Invalid updates do not replace the game's last good feed.
 
-This repository is public. Never put credentials, private game code, unreleased
-private information, or user data here. The game needs no GitHub or Cloudflare
-credentials to read it.
-
-## Hosting
-
-GitHub Pages serves this repository. `CNAME` names the custom domain. Cloudflare
-must proxy its DNS record after GitHub's certificate is ready, with strict TLS
-to the origin. An exact-host/path Cache Rule makes JSON cacheable and sets a
-300-second edge TTL. Other cyberfracture.com pages and rules are unaffected.
-
-The repository deliberately has no custom GitHub Actions workflows.
+This repository is public. Do not put credentials, private game source, or
+private user information here.
