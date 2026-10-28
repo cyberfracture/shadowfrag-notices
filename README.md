@@ -8,8 +8,22 @@ entries are clearly marked samples; replace them with real news when ready.
 Direct JSON URL:
 https://raw.githubusercontent.com/cyberfracture/shadowfrag-notices/main/notices.json
 
-Hosting and the `senpai.shadowfrag.com` domain will be configured manually by
-the owner. This repository contains the feed, not a GitHub Pages website.
+The feed is hosted by Cloudflare Pages under the project `shadowfrag-notices`.
+Its intended public address is https://senpai.shadowfrag.com/notices.json.
+The project is connected to this repository's `main` branch; GitHub Pages is not
+used. The domain requires a DNS CNAME for `senpai` pointing to
+`shadowfrag-notices.pages.dev` in the `shadowfrag.com` zone.
+
+## Deployment
+
+Cloudflare validates the feed, then publishes only `notices.json`. The configured
+command is `python3 validate.py && mkdir -p public && cp notices.json public/`;
+the output directory is `public`. No framework or Pages Functions are needed.
+Cloudflare Pages supplies its built-in static-asset caching and ETag validation.
+Do not add a separate cache-everything rule; it can delay new announcements.
+
+The game checks in menus roughly every five minutes with a small random delay,
+uses conditional requests, and retains its last valid feed when offline.
 
 ## Editing
 
