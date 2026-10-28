@@ -19,6 +19,10 @@ used. The domain requires a DNS CNAME for `senpai` pointing to
 Cloudflare validates the feed, then publishes only `notices.json`. The configured
 command is `python3 validate.py && mkdir -p public && cp notices.json public/`;
 the output directory is `public`. No framework or Pages Functions are needed.
+The repository's push webhook triggers the project's `main` deploy hook. Any
+push rebuilds `main`; other branches are never published. Native Git push
+triggers are disabled to avoid duplicate deployments. Hook credentials live in
+GitHub/Cloudflare settings only, not this repository or the game.
 Cloudflare Pages supplies its built-in static-asset caching and ETag validation.
 Do not add a separate cache-everything rule; it can delay new announcements.
 
