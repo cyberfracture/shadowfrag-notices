@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "notices": [
+    {
+      "id": "sample-welcome-20261028",
+      "date": "2026-10-28",
+      "title": "Welcome to the notice board",
+      "summary": "News from the dojo, delivered straight to your main menu.",
+      "body": "This is a sample announcement while the SHADOWFRAG notice board is being connected.\n\nFuture notices will bring you development updates, playtest information, and news from the dojo. You can read them here without leaving the game.",
+      "sample": true
+    },
+    {
+      "id": "sample-movement-20261028",
+      "date": "2026-10-28",
+      "title": "Find your flow",
+      "summary": "Chain a leap, a double jump, and a chi jump in the dojo.",
+      "body": "Sample training notice.\n\nVisit the dojo to practice movement at your own pace. Try a forward leap, change direction with a double jump, and use a chi jump to cross a gap.\n\nThis sample is not a scheduled event or a new patch announcement.",
+      "sample": true
+    },
+    {
+      "id": "sample-cosmetics-20261028",
+      "date": "2026-10-28",
+      "title": "Your ninja, your style",
+      "summary": "Try a different weapon and turn your ninja around in the menu.",
+      "body": "Sample cosmetics notice.\n\nOpen Cosmetics to explore your ninja's appearance. The main-menu weapon choices let you see how different weapons look in hand; drag the ninja to turn the preview.\n\nThis sample does not announce a store, a sale, or a reward.",
+      "sample": true
+    }
+  ]
+}
