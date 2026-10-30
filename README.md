@@ -46,9 +46,8 @@ rendered. Invalid updates do not replace the game's last good feed.
 ## Server directory
 
 Each `servers` entry has `id`, `name`, `description`, `address`, `port`,
-`server_name`, `trust_pem`, and `protocol`. The first entry is Shadow 1; its public
-connection identity is ready, while the game service's deployment is pending SSH
-access. A directory listing does not claim live availability, player count or ping.
+`server_name`, `trust_pem`, and `protocol`. The first entry is Shadow 1, deployed on Debian 13 with its public
+connection identity supplied here. A directory listing does not claim live availability, player count or ping.
 
 - Use a stable unique ID, up to 64 letters/digits/underscores/hyphens.
 - Names are at most 80 UTF-8 bytes; descriptions at most 240.

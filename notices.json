@@ -35,7 +35,7 @@
       "server_name": "shadow1",
       "trust_pem": "-----BEGIN CERTIFICATE-----\nMIIBujCCAV+gAwIBAgIUeRaI4ovrq5+XheZTQsyqBJel/b4wCgYIKoZIzj0EAwIw\nKjEoMCYGA1UEAwwfU2hhZG93ZnJhZyBTaGFkb3cxIHByaXZhdGUgcm9vdDAeFw0y\nNjEwMzAxMjE5NDFaFw0zNjEwMjcxMjE5NDFaMCoxKDAmBgNVBAMMH1NoYWRvd2Zy\nYWcgU2hhZG93MSBwcml2YXRlIHJvb3QwWTATBgcqhkjOPQIBBggqhkjOPQMBBwNC\nAASAaIipiY43MsnY26V0/zKGdPBKUWCAlud+wrrATXWJKdsteZiophOnXKJOqsBs\nnS7MoaZszCQfERHxQJNnoQgco2MwYTAdBgNVHQ4EFgQUhrKQ/+8d+yy8WSIHk3vt\nRp1TwAowHwYDVR0jBBgwFoAUhrKQ/+8d+yy8WSIHk3vtRp1TwAowDwYDVR0TAQH/\nBAUwAwEB/zAOBgNVHQ8BAf8EBAMCAQYwCgYIKoZIzj0EAwIDSQAwRgIhAPeH/jKJ\nBE37r3LeDymbq8NM9gYO6D21UBu2+sarkhDZAiEAoR3irBEFVNwetmFlo4ZaLbq2\nVaSKlZVc09Q41CYtNmM=\n-----END CERTIFICATE-----\n",
       "protocol": 44,
-      "description": "Dedicated SHADOWFRAG server. Deployment is being prepared."
+      "description": "Dedicated SHADOWFRAG server. Maps and modes follow the server rotation."
     }
   ]
 }
